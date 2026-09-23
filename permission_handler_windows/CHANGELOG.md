@@ -1,6 +1,7 @@
 ## 0.2.3
 
 * Stops subscribing to location updates when the plugin is registered. Windows no longer reports apps using `permission_handler` as accessing location. The `Geolocator` is now created only when checking the location service status.
+* Fixes the build with Visual Studio 2026 by dropping the `/await` compiler option. The plugin already compiles as C++20 and now uses standard coroutines.
 
 ## 0.2.2
 
