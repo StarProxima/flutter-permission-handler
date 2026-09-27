@@ -6,12 +6,14 @@ on:
     paths:
       - "permission_handler/**"
       - "permission_handler_apple/**"
+      - "permission_handler_platform_interface/**"
       - ".github/workflows/permission_handler_macos.yaml"
   pull_request:
     branches: [main, blancvpn]
     paths:
       - "permission_handler/**"
       - "permission_handler_apple/**"
+      - "permission_handler_platform_interface/**"
       - ".github/workflows/permission_handler_macos.yaml"
 
 jobs:

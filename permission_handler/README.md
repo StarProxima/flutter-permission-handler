@@ -3,7 +3,7 @@
 On most operating systems, permissions aren't just granted to apps at install time.
 Rather, developers have to ask the user for permission while the app is running.
 
-This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
+This plugin provides a cross-platform (iOS, Android, Windows, web, and macOS notifications) API to request permissions and check their status.
 You can also open the device's app settings so users can grant permission.  
 On Android, you can show a rationale for requesting permission.
 
