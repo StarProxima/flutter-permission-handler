@@ -3,7 +3,7 @@
 On most operating systems, permissions aren't just granted to apps at install time.
 Rather, developers have to ask the user for permission while the app is running.
 
-This plugin provides a cross-platform (iOS, Android) API to request permissions and check their status.
+This plugin provides a cross-platform (iOS, Android, Windows, web, and macOS notifications) API to request permissions and check their status.
 You can also open the device's app settings so users can grant permission.  
 On Android, you can show a rationale for requesting permission.
 
@@ -12,6 +12,17 @@ See the [FAQ](#faq) section for more information on common questions when using 
 ## Setup
 
 While the permissions are being requested during runtime, you'll still need to tell the OS which permissions your app might potentially use. That requires adding permission configuration to Android* and iOS-specific files.
+
+<details>
+<summary>macOS</summary>
+
+On macOS 12 and later, `Permission.notification` is supported through CocoaPods. The implementation checks notification status, requests authorization, and opens notification settings. On macOS 13 and later, settings open for the current app; on macOS 12, the Notifications preference pane opens. Other permission groups return `denied` and have no associated service.
+
+It does not register for APNs and does not set a `UNUserNotificationCenter` delegate.
+
+When using these changes from a Git checkout, override both `permission_handler` and `permission_handler_apple` from the same repository and commit. The hosted Apple package does not contain this macOS implementation.
+
+</details>
 
 <details>
 <summary>Android (click to expand)</summary>

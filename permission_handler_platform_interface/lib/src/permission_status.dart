@@ -44,7 +44,7 @@ enum PermissionStatus {
   /// The application is provisionally authorized to post non-interruptive user
   /// notifications.
   ///
-  /// *Only supported on iOS (iOS12+).*
+  /// *Only supported on iOS (iOS12+) and macOS (macOS12+).*
   provisional,
 }
 
@@ -124,7 +124,7 @@ extension PermissionStatusGetters on PermissionStatus {
   /// If the application is provisionally authorized to post non-interruptive
   /// user notifications.
   ///
-  /// *Only supported on iOS (iOS12+).*
+  /// *Only supported on iOS (iOS12+) and macOS (macOS12+).*
   bool get isProvisional => this == PermissionStatus.provisional;
 }
 
@@ -172,6 +172,6 @@ extension FuturePermissionStatusGetters on Future<PermissionStatus> {
   /// If the application is provisionally authorized to post non-interruptive
   /// user notifications.
   ///
-  /// *Only supported on iOS (iOS12+).*
+  /// *Only supported on iOS (iOS12+) and macOS (macOS12+).*
   Future<bool> get isProvisional async => (await this).isProvisional;
 }

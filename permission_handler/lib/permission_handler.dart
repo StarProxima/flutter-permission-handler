@@ -152,7 +152,7 @@ extension PermissionCheckShortcuts on Permission {
   Future<bool> get isPermanentlyDenied => status.isPermanentlyDenied;
 
   /// If the application is provisionally authorized to post noninterruptive user notifications.
-  /// *Only supported on iOS.*
+  /// *Only supported on iOS 12+ and macOS 12+.*
   Future<bool> get isProvisional => status.isProvisional;
 }
 

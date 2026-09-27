@@ -1,3 +1,7 @@
+## Unreleased
+
+- Adds support for notification permissions on macOS 12 and later.
+
 ## 13.0.2
 
 - Updates the README to detect a permanent denial on Android from the result of `request()`, as `status` cannot detect it.
