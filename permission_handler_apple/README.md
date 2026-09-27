@@ -10,6 +10,12 @@ Since version 9.1.0 of the [permission_handler](https://pub.dev/packages/permiss
 
 More detailed instructions on using the API can be found in the [README.md](../permission_handler/README.md) of the [permission_handler](https://pub.dev/packages/permission_handler) package.
 
+## macOS
+
+On macOS 12 and later, this package supports `Permission.notification` through CocoaPods. It checks notification status, requests authorization, and opens notification settings. On macOS 13 and later, settings open for the current app; on macOS 12, the Notifications preference pane opens. Other permission groups return `denied` and have no associated service.
+
+The macOS implementation does not register for APNs and does not set a `UNUserNotificationCenter` delegate.
+
 ## Swift Package Manager
 
 Only the permissions your app actually uses are compiled into the binary. Referencing an iOS

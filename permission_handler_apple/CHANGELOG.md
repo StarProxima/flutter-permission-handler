@@ -1,3 +1,7 @@
+## Unreleased
+
+- Adds support for notification permissions on macOS 12 and later.
+
 ## 9.6.1
 
 - Fixes small mistakes in the README.md documentation.
